@@ -35,15 +35,15 @@ HEIGHT = 224
 # create window
 window = Tk()
 window.title("Pomodoro Time Manager")
-window.config(padx=100, pady=50)
+window.config(padx=100, pady=50, bg=YELLOW)
 
 # develop photo image
 tomato_img = PhotoImage(file="tomato.png")
 
 # create canvas
-canvas = Canvas(width=WIDTH, height=HEIGHT)
-canvas.create_image(WIDTH/2 + 3, HEIGHT/2, image=tomato_img)
-canvas.create_text(WIDTH/2 + 3, 130, text="00:00", fill="white", font=FONT)
+canvas = Canvas(width=WIDTH, height=HEIGHT, bg=YELLOW, highlightthickness=0)
+canvas.create_image(WIDTH/2, HEIGHT/2, image=tomato_img)
+canvas.create_text(WIDTH/2, 130, text="00:00", fill="white", font=FONT)
 canvas.pack()
 
 window.mainloop()
